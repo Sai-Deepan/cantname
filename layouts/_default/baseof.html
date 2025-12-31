@@ -5,18 +5,35 @@
     <title>{{ .Title }} | {{ .Site.Title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{/* Hugo Pipes: bundle all CSS from assets/css */}}
     {{ $css := resources.Match "css/*.css" | resources.Concat "css/main.css" | minify }}
     <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 
+    <link rel="stylesheet" href="/_pagefind/pagefind-ui.css">
 </head>
+
 <body>
 
 {{ partial "header.html" . }}
 
+<div class="search-strip">
+    <div id="search"></div>
+</div>
+
 <main>
     {{ block "main" . }}{{ end }}
 </main>
+
+<script src="/_pagefind/pagefind-ui.js" defer></script>
+<script>
+    if (window.PagefindUI) {
+        new PagefindUI({
+            element: "#search",
+            showSubResults: true,
+            debounceTimeoutMs: 200,
+            placeholder: "search for articles, authors, topics..."
+        });
+    }
+</script>
 
 </body>
 </html>

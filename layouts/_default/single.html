@@ -1,9 +1,9 @@
 {{ define "main" }}
 <section class="content">
-    <h1>{{ .Site.Title }}</h1>
+    <h1>{{ .Title }}</h1>
 
     <div data-pagefind-body>
-        <p>{{ .Site.Params.description }}</p>
+        {{ .Content }}
     </div>
 </section>
 {{ end }}

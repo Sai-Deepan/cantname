@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section class="content">
+    <h1>{{ .Title }}</h1>
+
+    <div data-pagefind-body>
+        {{ .Content }}
+    </div>
+
+    {{ range .Pages }}
+    <article>
+        <h2>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h2>
+        <p>{{ .Summary }}</p>
+    </article>
+    {{ end }}
+</section>
+{{ end }}
