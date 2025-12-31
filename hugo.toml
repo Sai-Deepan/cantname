@@ -1,7 +1,6 @@
 baseURL = "https://example.org/"
 languageCode = "en-us"
 title = "TestSite"
-theme = "" # or remove if you are building custom layouts
 enableRobotsTXT = true
 
 buildDrafts = false
@@ -18,35 +17,31 @@ relativeURLs = false
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
-      unsafe = false # no inline HTML hacks
+      unsafe = false
 
   [markup.highlight]
     style = "monokai"
     lineNos = true
     noClasses = false
 
-# Output formats
 [outputs]
   home = ["HTML"]
   section = ["HTML"]
   taxonomy = ["HTML"]
   term = ["HTML"]
 
-# Taxonomies (THIS IS IMPORTANT)
 [taxonomies]
   author = "authors"
   concept = "concepts"
   era = "eras"
   tag = "tags"
 
-# Content sections (explicit, no blog assumptions)
 [permalinks]
-  books = "/books/:slug/"
+  research = "/research/:slug/"
   timeline = "/timeline/:slug/"
-  concepts = "/concepts/:slug/"
-  authors = "/authors/:slug/"
+  docs = "/docs/:slug/"
+  author = "/author/:slug/"
 
-# Menu (header navigation)
 [menu]
   [[menu.main]]
     name = "/about"
@@ -60,17 +55,17 @@ relativeURLs = false
 
   [[menu.main]]
     name = "/author"
-    url = "/authors/"
+    url = "/author/"
     weight = 3
 
   [[menu.main]]
     name = "/research"
-    url = "/books/"
+    url = "/research/"
     weight = 4
 
   [[menu.main]]
     name = "/docs"
-    url = "/concepts/"
+    url = "/docs/"
     weight = 5
 
   [[menu.main]]
@@ -78,7 +73,6 @@ relativeURLs = false
     url = "/contribute/"
     weight = 6
 
-# Site params (used everywhere)
 [params]
   description = "Understanding computing systems from original design. No folklore. No magic."
   defaultTheme = "dark"

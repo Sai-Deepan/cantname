@@ -2,9 +2,16 @@
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
 
     background: #000;
     border-bottom: 1px solid #1e1e1e;
+}
+
+/* global reset */
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
 .header-inner {
