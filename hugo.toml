@@ -1,0 +1,93 @@
+baseURL = "https://example.org/"
+languageCode = "en-us"
+title = "TestSite"
+theme = "" # or remove if you are building custom layouts
+enableRobotsTXT = true
+
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+uglyURLs = false
+canonifyURLs = true
+relativeURLs = false
+
+[pagination]
+  pagerSize = 12
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false # no inline HTML hacks
+
+  [markup.highlight]
+    style = "monokai"
+    lineNos = true
+    noClasses = false
+
+# Output formats
+[outputs]
+  home = ["HTML"]
+  section = ["HTML"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
+
+# Taxonomies (THIS IS IMPORTANT)
+[taxonomies]
+  author = "authors"
+  concept = "concepts"
+  era = "eras"
+  tag = "tags"
+
+# Content sections (explicit, no blog assumptions)
+[permalinks]
+  books = "/books/:slug/"
+  timeline = "/timeline/:slug/"
+  concepts = "/concepts/:slug/"
+  authors = "/authors/:slug/"
+
+# Menu (header navigation)
+[menu]
+  [[menu.main]]
+    name = "/about"
+    url = "/about/"
+    weight = 1
+
+  [[menu.main]]
+    name = "/timeline"
+    url = "/timeline/"
+    weight = 2
+
+  [[menu.main]]
+    name = "/author"
+    url = "/authors/"
+    weight = 3
+
+  [[menu.main]]
+    name = "/research"
+    url = "/books/"
+    weight = 4
+
+  [[menu.main]]
+    name = "/docs"
+    url = "/concepts/"
+    weight = 5
+
+  [[menu.main]]
+    name = "/contribute"
+    url = "/contribute/"
+    weight = 6
+
+# Site params (used everywhere)
+[params]
+  description = "Understanding computing systems from original design. No folklore. No magic."
+  defaultTheme = "dark"
+
+  pdfDisclaimer = "Primary sources are linked for scholarly reference. Rights remain with original authors."
+
+  archivePrinciples = [
+    "Original authors only",
+    "Primary sources over commentary",
+    "Design intent before implementation",
+    "No tutorials, no shortcuts"
+  ]

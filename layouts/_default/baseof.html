@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{/* Hugo Pipes: bundle all CSS from assets/css */}}
+    {{ $css := resources.Match "css/*.css" | resources.Concat "css/main.css" | minify }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+
+</head>
+<body>
+
+{{ partial "header.html" . }}
+
+<main>
+    {{ block "main" . }}{{ end }}
+</main>
+
+</body>
+</html>
