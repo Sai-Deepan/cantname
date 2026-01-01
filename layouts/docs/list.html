@@ -3,17 +3,22 @@
 
     <div class="card-grid">
         {{ range .Pages }}
-        <article class="card">
-            <a href="{{ .RelPermalink }}" class="card-link">
 
-                <!-- Overlay reveal -->
+        <article class="card {{ if .Params.tribute }}card--tribute{{ end }}">
+            <a href="{{ .RelPermalink }}" class="card-link">
                 <div class="card-reveal">
                     <h3 class="card-title">{{ .Title }}</h3>
-                    <p class="card-desc">{{ .Summary }}</p>
-                </div>
 
+                    {{ if .Params.tribute }}
+                    <p class="card-desc">{{ .Params.subtitle }}</p>
+                    {{ else }}
+                    <p class="card-desc">{{ .Summary }}</p>
+                    {{ end }}
+
+                </div>
             </a>
         </article>
+
         {{ end }}
     </div>
 

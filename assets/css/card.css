@@ -90,6 +90,30 @@
     opacity: 1;
 }
 
+/* Tribute card variant */
+.card--tribute {
+    grid-column: 1 / -1;
+    height: 260px;
+}
+
+/* Make it feel weightier */
+.card--tribute .card-title {
+    font-size: 1.4rem;
+}
+
+.card--tribute .card-desc {
+    font-size: 0.95rem;
+    max-width: 60ch;
+}
+
+/* Mobile: full width */
+@media (max-width: 768px) {
+    .card--tribute {
+        grid-column: span 2;
+        height: auto;
+    }
+}
+
 /* Mobile */
 @media (max-width: 768px) {
     .card-grid {
