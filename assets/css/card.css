@@ -1,98 +1,104 @@
 .card-section {
-    padding: 2rem;
+    padding: 3rem 1.5rem;
 }
 
-.section-title {
-    font-family: serif;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-}
-
+/* Grid */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 2rem;
 
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
 }
 
-/* Card shell */
+/* Card base */
 .card {
     position: relative;
     height: 260px;
     border-radius: 24px;
     overflow: hidden;
-    background: #5a5a5a;
+    background: #555;
 }
 
-/* Entire card is clickable */
+/* Clickable area */
 .card-link {
     display: block;
     height: 100%;
     width: 100%;
     text-decoration: none;
     color: inherit;
-    position: relative;
 }
 
-/* Dark overlay */
-.card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.55);
-    opacity: 0;
-    transition: opacity 0.25s ease;
-    z-index: 1;
-}
-
-/* Reveal container */
+/* Reveal overlay (hidden by default) */
 .card-reveal {
     position: absolute;
-    left: 1.2rem;
-    right: 1.2rem;
-    bottom: 1.2rem;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 1.4rem;
+
+    background: linear-gradient(
+            180deg,
+            rgba(0,0,0,0.0) 40%,
+            rgba(0,0,0,0.85) 100%
+    );
 
     opacity: 0;
     transform: translateY(12px);
-    transition: opacity 0.25s ease, transform 0.25s ease;
-    z-index: 2;
+    transition:
+            opacity 0.25s ease,
+            transform 0.25s ease;
 }
 
-/* Hover behavior */
-.card:hover::before {
-    opacity: 1;
-}
-
-.card:hover .card-reveal {
+/* Hover + keyboard focus */
+.card:hover .card-reveal,
+.card:focus-within .card-reveal {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Text styling */
+/* Title */
 .card-title {
     font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 0.4rem;
     color: #fff;
+    margin-bottom: 0.4rem;
 }
 
+/* Description */
 .card-desc {
     font-size: 0.8rem;
+    line-height: 1.35;
     color: #ddd;
-    line-height: 1.3;
 }
 
-/* Mobile: tap to reveal is acceptable */
+/* Subtle darkening on hover */
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.card:hover::after {
+    opacity: 1;
+}
+
+/* Mobile */
 @media (max-width: 768px) {
     .card-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-}
 
-.card:hover {
-    transform: translateY(-4px);
-    transition: transform 0.25s ease;
+    /* Always reveal on mobile (no hover) */
+    .card-reveal {
+        opacity: 1;
+        transform: none;
+    }
 }
