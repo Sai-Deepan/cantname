@@ -1,0 +1,21 @@
+{{ define "main" }}
+<section class="card-section">
+
+    <div class="card-grid">
+        {{ range .Pages }}
+        <article class="card">
+            <a href="{{ .RelPermalink }}" class="card-link">
+
+                <!-- Overlay reveal -->
+                <div class="card-reveal">
+                    <h3 class="card-title">{{ .Title }}</h3>
+                    <p class="card-desc">{{ .Summary }}</p>
+                </div>
+
+            </a>
+        </article>
+        {{ end }}
+    </div>
+
+</section>
+{{ end }}
