@@ -2,4 +2,4 @@
 title: "Contribute"
 ---
 
-Sai
+Feel free to contribute to the project

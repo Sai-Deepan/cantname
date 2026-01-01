@@ -74,14 +74,14 @@ relativeURLs = false
     weight = 6
 
 [params]
-  description = "Understanding computing systems from original design. No folklore. No magic."
+  description = "Understanding computing systems from original design"
   defaultTheme = "dark"
 
   pdfDisclaimer = "Primary sources are linked for scholarly reference. Rights remain with original authors."
 
   archivePrinciples = [
     "Original authors only",
-    "Primary sources over commentary",
+    "Primary sources preferred",
     "Design intent before implementation",
     "No tutorials, no shortcuts"
   ]
