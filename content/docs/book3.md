@@ -1,4 +1,5 @@
 ---
-title: "TEST 2"
-summary: "Codified pipes, filters, and the UNIX philosophy."
+title: "The UNIX Time-Sharing System"
+summary: "The original paper describing UNIX design."
+cover: "/covers/image3.jpg"
 ---

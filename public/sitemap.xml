@@ -20,11 +20,7 @@
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/test/</loc>
-  </url><url>
     <loc>http://localhost:1313/research/test/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/test-2/</loc>
   </url><url>
     <loc>http://localhost:1313/research/test-2/</loc>
   </url><url>
@@ -90,8 +86,6 @@
   </url><url>
     <loc>http://localhost:1313/docs/the-unix-programming-environment/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/the-unix-programming-environment/</loc>
-  </url><url>
     <loc>http://localhost:1313/research/the-unix-programming-environment/</loc>
   </url><url>
     <loc>http://localhost:1313/research/the-unix-programming-environment/</loc>
@@ -153,6 +147,12 @@
     <loc>http://localhost:1313/research/the-unix-programming-environment/</loc>
   </url><url>
     <loc>http://localhost:1313/research/the-unix-programming-environment/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/the-unix-time-sharing-system/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/the-unix-time-sharing-system/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/the-unix-time-sharing-system/</loc>
   </url><url>
     <loc>http://localhost:1313/timeline/</loc>
   </url><url>

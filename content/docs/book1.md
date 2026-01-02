@@ -1,4 +1,5 @@
 ---
-title: "The UNIX Programming Environment"
-summary: "Codified pipes, filters, and the UNIX philosophy."
+title: "The UNIX Time-Sharing System"
+summary: "The original paper describing UNIX design."
+cover: "/covers/image1.jpg"
 ---
