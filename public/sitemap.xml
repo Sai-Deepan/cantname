@@ -4,9 +4,13 @@
   <url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
+    <loc>http://localhost:1313/research/an-introduction-to-python-for-unix/c-programmers/</loc>
+  </url><url>
     <loc>http://localhost:1313/author/</loc>
   </url><url>
     <loc>http://localhost:1313/authors/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/c/</loc>
   </url><url>
     <loc>http://localhost:1313/concepts/</loc>
   </url><url>
@@ -15,6 +19,12 @@
     <loc>http://localhost:1313/docs/</loc>
   </url><url>
     <loc>http://localhost:1313/eras/</loc>
+  </url><url>
+    <loc>http://localhost:1313/authors/guido-van-rossum/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/programming/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/python/</loc>
   </url><url>
     <loc>http://localhost:1313/research/</loc>
   </url><url>
@@ -146,8 +156,6 @@
   </url><url>
     <loc>http://localhost:1313/research/the-unix-programming-environment/</loc>
   </url><url>
-    <loc>http://localhost:1313/research/the-unix-programming-environment/</loc>
-  </url><url>
     <loc>http://localhost:1313/docs/the-unix-time-sharing-system/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/the-unix-time-sharing-system/</loc>
@@ -157,5 +165,7 @@
     <loc>http://localhost:1313/timeline/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/tribute-to-aaron-swartz/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/unix/</loc>
   </url>
 </urlset>
