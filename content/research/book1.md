@@ -11,4 +11,5 @@ volume: 1
 edition: 2
 isbn: "978-0-596-00027-5"
 cover: "/covers/01.02.LA.0000001.png"
+pdf: "https://archive.org/details/unix"
 ---

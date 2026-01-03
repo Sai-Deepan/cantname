@@ -1,10 +1,31 @@
 {{ define "main" }}
-<section class="content">
-    <h1>{{ .Title }}</h1>
 
-    <div data-pagefind-body>
-        {{ .Content }}
+<section class="doc-page">
+    <div class="doc-hero">
+
+        <div class="doc-cover"
+             {{ with .Params.cover }}
+             style="background-image: url('{{ . }}');"
+             {{ end }}>
+
+            {{ with .Params.pdf }}
+            <a class="doc-read"
+               href="{{ . }}"
+               target="_blank"
+               rel="noopener">
+                READ PDF
+            </a>
+            {{ end }}
+
+        </div>
+
+        <div class="doc-meta">
+            <h1>{{ .Title }}</h1>
+            <p class="doc-summary">{{ .Summary }}</p>
+            {{ .Content }}
+        </div>
+
     </div>
 </section>
-{{ end }}
 
+{{ end }}

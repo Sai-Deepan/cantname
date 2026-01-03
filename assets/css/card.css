@@ -31,6 +31,7 @@
     inset: 0;
     background: rgba(0,0,0,0.05);
     pointer-events: none;
+    z-index: 1;
 }
 
 /* Clickable area */
@@ -40,6 +41,18 @@
     width: 100%;
     text-decoration: none;
     color: inherit;
+}
+
+.card-reveal {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+.card-link {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
 }
 
 /* Reveal overlay (hidden by default) */
@@ -96,6 +109,8 @@
     background: rgba(0,0,0,0.25);
     opacity: 0;
     transition: opacity 0.25s ease;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .card:hover::after {
