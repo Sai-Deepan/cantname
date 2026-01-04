@@ -4,6 +4,8 @@
   <url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/an-introduction-to-python-for-unix/c-programmers/</loc>
+  </url><url>
     <loc>http://localhost:1313/research/an-introduction-to-python-for-unix/c-programmers/</loc>
   </url><url>
     <loc>http://localhost:1313/author/</loc>
@@ -35,8 +37,6 @@
     <loc>http://localhost:1313/research/test-2/</loc>
   </url><url>
     <loc>http://localhost:1313/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/the-unix-programming-environment/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/the-unix-programming-environment/</loc>
   </url><url>
